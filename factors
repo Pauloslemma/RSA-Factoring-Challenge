@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 import sys
 import time
 
@@ -19,17 +18,13 @@ def factorize(num):
 
 
 if __name__ == "__main__":
-
-
     '''Reads the input file.
     '''
     if len(sys.argv) != 2:
         print("Usage: factors <file>")
         exit()
 
-
     input_file = sys.argv[1]
-
 
     try:
         with open(input_file, 'r') as f:
@@ -38,9 +33,7 @@ if __name__ == "__main__":
         print("File not found")
         exit()
 
-
     start_time = time.time()
-
 
     '''loops over each line (which should contain one natural number per line),
         and calls factorize on each number.
@@ -52,7 +45,6 @@ if __name__ == "__main__":
         factors = factorize(num)
         if factors:
             print(f"{num}={factors[0]}*{factors[1]}")
-
 
         '''If the elapsed time exceeds 5 seconds,
             the program exits with an error message.
